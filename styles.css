@@ -1076,3 +1076,53 @@ body.scrolling .cord {
     transform: rotate(0deg);
 }
 
+@media (max-width: 768px) {
+  /* 💥 Supprimer layout horizontal pour mobile */
+  .gallery-section {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    margin-bottom: 80px;
+  }
+
+  .gallery-container {
+    padding: 100px 20px 40px;
+  }
+
+  /* 💡 Réduire la taille des œuvres */
+  .artwork {
+    position: static !important;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto 20px;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .artworks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* 💡 Cacher les éléments inutiles sur mobile */
+  .cords-container,
+  .nav-dot,
+  .gallery-nav {
+    display: none !important;
+  }
+
+  /* 💡 Texte + sections plus lisibles */
+  .section-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .artist-section-wrapper {
+    padding: 20px;
+  }
+}
