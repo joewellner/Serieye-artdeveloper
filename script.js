@@ -120,7 +120,7 @@ const artworkData = {
     },
     15: {
         title: "Bois d’Oeuvre 6",
-        description: "This series of seven vases offers a sensitive and powerful reflection on the devastating wildfires affecting Canada. Each piece, shaped in an ephemeral mold made from construction wood (2x4), retains the burning imprint of matter in transformation. As the series progresses, the marks left by the wood become more pronounced, symbolizing the irreversible transformation of nature.<br><br>The wood used, sourced from Canadian forests now threatened by climate change, becomes both medium and memory. The black tones and smoky effects reinforce this narrative dimension, evoking both destruction and testimony.<br><br>Halfway between functional objects and sculptures, these vases embody the urgency of a dialogue with our environment and the traces we leave upon it.",
+        description: "This series of seven vases reflects on the devastating wildfires in Canada.<br><br>Each piece, shaped in a wooden mold, bears the marks of transformation and destruction. The black tones and smoky effects evoke both loss and memory.<br><br>Between object and sculpture, these vases highlight the urgent need for dialogue with our environment.",
         artist: "Alex Joncas",
         year: "2024",
         dimensions: "66 × 27 × 24 cm",
@@ -128,7 +128,7 @@ const artworkData = {
     },
     16: {
         title: "Bois d’Oeuvre 7",
-        description: "This series of seven vases offers a sensitive and powerful reflection on the devastating wildfires affecting Canada. Each piece, shaped in an ephemeral mold made from construction wood (2x4), retains the burning imprint of matter in transformation. As the series progresses, the marks left by the wood become more pronounced, symbolizing the irreversible transformation of nature.<br><br>The wood used, sourced from Canadian forests now threatened by climate change, becomes both medium and memory. The black tones and smoky effects reinforce this narrative dimension, evoking both destruction and testimony.<br><br>Halfway between functional objects and sculptures, these vases embody the urgency of a dialogue with our environment and the traces we leave upon it.",
+        description: "This series of seven vases reflects on the devastating wildfires in Canada. Each piece, shaped in a wooden mold, bears the marks of transformation and destruction. The black tones and smoky effects evoke both loss and memory.<br><br>Between object and sculpture, these vases highlight the urgent need for dialogue with our environment.",
         artist: "Alex Joncas",
         year: "2024",
         dimensions: "20 × 24 × 28 cm",
@@ -137,7 +137,7 @@ const artworkData = {
     },
     17: {
         title: "Bois d’Oeuvre 4",
-        description: "This series of seven vases offers a sensitive and powerful reflection on the devastating wildfires affecting Canada. Each piece, shaped in an ephemeral mold made from construction wood (2x4), retains the burning imprint of matter in transformation. As the series progresses, the marks left by the wood become more pronounced, symbolizing the irreversible transformation of nature.<br><br>The wood used, sourced from Canadian forests now threatened by climate change, becomes both medium and memory. The black tones and smoky effects reinforce this narrative dimension, evoking both destruction and testimony.<br><br>Halfway between functional objects and sculptures, these vases embody the urgency of a dialogue with our environment and the traces we leave upon it.",
+        description: "This series of seven vases reflects on the devastating wildfires in Canada. Each piece, shaped in an ephemeral mold made from construction wood (2x4), retains the burning imprint of matter in transformation. As the series progresses, the marks left by the wood become more pronounced, symbolizing the irreversible transformation of nature.<br><br>The wood used, sourced from Canadian forests now threatened by climate change, becomes both medium and memory. The black tones and smoky effects reinforce this narrative dimension, evoking both destruction and testimony.<br><br>Halfway between functional objects and sculptures, these vases embody the urgency of a dialogue with our environment and the traces we leave upon it.",
         artist: "Alex Joncas",
         year: "2024",
         dimensions: "57 × 27 × 27 cm",
