@@ -533,3 +533,18 @@ body {
 .footer-links { display:inline-flex; gap:14px; }
 .footer-text { font-size:13px; }
 .footer-link { font-size:13px; text-transform:uppercase; letter-spacing:.8px; }
+
+/* === ABOUT — dégager le titre sous le header fixe === */
+:root { --aboutNavSafe: calc(env(safe-area-inset-top, 0px) + 130px); } /* iPhone notch safe */
+
+.hero-section { 
+  padding-top: var(--aboutNavSafe) !important; /* pousse le bloc titre sous la nav */
+}
+
+/* Un peu plus d’air sur petits écrans où le logo est plus grand */
+@media (max-width: 768px) {
+  :root { --aboutNavSafe: calc(env(safe-area-inset-top, 0px) + 150px); }
+}
+@media (max-width: 480px) {
+  :root { --aboutNavSafe: calc(env(safe-area-inset-top, 0px) + 170px); }
+}
