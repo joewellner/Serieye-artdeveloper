@@ -555,3 +555,29 @@ body {
 .hero-section {
   padding-top: calc(var(--navH) + 16px) !important; /* espace = hauteur nav + 16px */
 }
+
+/* ABOUT — pousser le bloc titre sous la nav, auto et safe pour iPhone notch */
+@media (max-width: 900px) {
+  :root { --navH: 120px; } /* valeur de secours si le JS n'a pas encore calculé */
+
+  /* Le conteneur du titre (hero/section titre) */
+  .hero-section {
+    /* on utilise la vraie hauteur de nav + une marge adaptative */
+    padding-top: calc(var(--navH) + clamp(12px, 4vw, 36px)) !important;
+  }
+
+  /* Si un style mobile place le titre en position/transform, on neutralise */
+  .hero-section .section-title,
+  .hero-section .hero-title,
+  .hero-section h1 {
+    position: static !important;
+    transform: none !important;
+    margin-top: 0 !important;
+  }
+
+  /* Quand on navigue à une ancre vers le titre, il ne sera pas caché */
+  .hero-section,
+  .hero-section .section-title,
+  .hero-section h1 { scroll-margin-top: calc(var(--navH) + 12px); }
+}
+

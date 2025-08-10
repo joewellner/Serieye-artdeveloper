@@ -1264,3 +1264,20 @@ body.scrolling .cord {
   /* espace contenu sous header réduit */
   body.home { padding-top: 70px; }
 }
+
+/* HOME (index) — header horizontal ultra-compact en mobile */
+@media (max-width: 768px) {
+  body.home .main-nav {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 !important;
+    padding: 8px 12px !important;     /* encore plus fin */
+  }
+  body.home .logo-img { height: 40px !important; }
+  body.home .nav-right { gap: 12px !important; }
+  body.home .nav-link { font-size: 12px; letter-spacing: .8px; padding: 6px 0; }
+
+  /* Espace contenu sous header (dépendra de la vraie hauteur calculée plus bas) */
+  body.home { padding-top: var(--navH, 68px); }
+}

@@ -175,3 +175,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setNavH();
 })();
+
+// ABOUT — mesure la vraie hauteur du header et met à jour --navH en temps réel
+(function () {
+  const nav = document.querySelector('.main-nav');
+  if (!nav) return;
+
+  const setNavH = () => {
+    // safe-area iOS + hauteur réelle du header
+    const safe = parseInt(getComputedStyle(document.documentElement).getPropertyValue('env(safe-area-inset-top, 0)')) || 0;
+    const h = Math.ceil(nav.getBoundingClientRect().height) + safe;
+    document.documentElement.style.setProperty('--navH', h + 'px');
+  };
+
+  // on recalcule au chargement, redimensionnement, scroll, et quand la nav change de taille
+  window.addEventListener('load', setNavH);
+  window.addEventListener('resize', setNavH);
+  window.addEventListener('scroll', setNavH, { passive: true });
+  new ResizeObserver(setNavH).observe(nav);
+
+  setNavH();
+})();
