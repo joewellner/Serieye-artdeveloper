@@ -1119,3 +1119,76 @@ body.scrolling .cord {
     padding: 20px;
   }
 }
+
+/* ================================
+   MOBILE FIXES (≤ 768px)
+   À coller tout en bas de styles.css
+   ================================ */
+@media (max-width: 768px) {
+  /* Header compact */
+  .main-nav {
+    padding: 12px 16px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .nav-right { gap: 16px; flex-wrap: wrap; }
+  .logo-img { height: 72px !important; width: auto; }
+
+  /* Contenu sous le header fixe */
+  body { padding-top: 110px; }
+  .gallery-container { padding: 24px 16px 40px; }
+
+  /* Fin du layout “absolu” → flux vertical */
+  .gallery-sections,
+  .gallery-section {
+    position: static !important;
+    height: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+  .gallery-section { margin-bottom: 64px; }
+
+  /* On empile les œuvres proprement */
+  .artworks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    position: static !important;
+  }
+  .artwork {
+    position: static !important;
+    width: 92vw;
+    max-width: 320px;   /* ajuste si besoin */
+    height: auto !important;
+    margin: 0 auto;
+    transform: none !important;
+    animation: none !important;
+  }
+  .artwork img { width: 100%; height: auto; }
+
+  /* On cache ce qui encombre en mobile */
+  .cords-container,
+  .gallery-nav,
+  .nav-dot { display: none !important; }
+
+  /* Titres de section lisibles */
+  .section-title {
+    position: static !important;
+    transform: none !important;
+    margin: 0 0 16px 0;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  /* Bloc bio artiste plus souple */
+  .artist-section-wrapper {
+    margin: 24px auto 0 auto !important;
+    padding: 20px !important;
+    width: 94% !important;
+  }
+  .artist-bio { flex-direction: column; text-align: center; gap: 16px; }
+  .artist-photo { width: 220px !important; height: 220px !important; margin: 0 auto !important; }
+}
