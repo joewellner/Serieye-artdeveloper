@@ -548,3 +548,10 @@ body {
 @media (max-width: 480px) {
   :root { --aboutNavSafe: calc(env(safe-area-inset-top, 0px) + 170px); }
 }
+
+/* === ABOUT — pousser le titre sous la nav fixe, hauteur auto === */
+:root { --navH: 120px; } /* valeur de secours */
+
+.hero-section {
+  padding-top: calc(var(--navH) + 16px) !important; /* espace = hauteur nav + 16px */
+}

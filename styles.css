@@ -1239,3 +1239,28 @@ body.scrolling .cord {
   .main-nav.scrolled .logo-img { height: 42px !important; }
   body { padding-top: 78px; } /* compense le header réduit */
 }
+/* === HOME (index) — Header horizontal & compact sur mobile === */
+@media (max-width: 768px) {
+  body.home .main-nav {
+    flex-direction: row !important;      /* au lieu de column */
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 !important;
+    padding: 10px 14px !important;       /* moins haut */
+  }
+  body.home .logo-img {
+    height: 44px !important;             /* logo plus petit */
+    object-fit: contain;
+  }
+  body.home .nav-right {
+    gap: 14px !important;
+    flex-wrap: nowrap;
+  }
+  body.home .nav-link {
+    font-size: 12px;                     /* lisible mais compact */
+    letter-spacing: .8px;
+    padding: 6px 0;
+  }
+  /* espace contenu sous header réduit */
+  body.home { padding-top: 70px; }
+}

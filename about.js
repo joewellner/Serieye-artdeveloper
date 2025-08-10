@@ -156,3 +156,22 @@ document.addEventListener('DOMContentLoaded', function() {
   apply();
   window.addEventListener('scroll', apply, { passive: true });
 })();
+
+// === ABOUT — calcule la hauteur réelle du header et met à jour --navH
+(function () {
+  const nav = document.querySelector('.main-nav');
+  if (!nav) return;
+
+  const setNavH = () => {
+    const h = Math.ceil(nav.getBoundingClientRect().height);
+    document.documentElement.style.setProperty('--navH', h + 'px');
+  };
+
+  // maj au chargement, au resize et quand la classe de nav change (shrink/hide)
+  window.addEventListener('load', setNavH);
+  window.addEventListener('resize', setNavH);
+  new ResizeObserver(setNavH).observe(nav);
+  window.addEventListener('scroll', setNavH, { passive: true });
+
+  setNavH();
+})();
