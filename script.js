@@ -4,7 +4,7 @@ const artworkData = {
         title: "Chair BOBI",
         description: "This new collection explores uncharted territory: brass that is formed, stretched, and shaped through an innovative process that frees the tube from its constraints to reveal its hidden flexibility. Continuing its exploration of undulation, free lines, and rhythm, Atelier Tison deepens its dialogue between material and movement. Brass—noble and alive—becomes a field of sculptural experimentation, where each curve seems born from a single breath.",
         artist: "Atelier Tison",
-        year: "2023",
+        year: "2025",
         dimensions: "74 × 71 × 74  cm",
         image: "assets/images/artwork1.jpg"
     },
@@ -12,7 +12,7 @@ const artworkData = {
         title: "HELIOS",
         description: "This new collection explores uncharted territory: brass that is formed, stretched, and shaped through an innovative process that frees the tube from its constraints to reveal its hidden flexibility. Continuing its exploration of undulation, free lines, and rhythm, Atelier Tison deepens its dialogue between material and movement. Brass—noble and alive—becomes a field of sculptural experimentation, where each curve seems born from a single breath.",
         artist: "Atelier Tison",
-        year: "2023",
+        year: "2024",
         dimensions: "180 × 12 cm",
         image: "assets/images/artwork2.jpg"
     },
@@ -77,7 +77,7 @@ const artworkData = {
         image: "assets/images/artwork9.jpg"
     },
     10: {
-        title: "Orphée Ceramic",
+        title: "Vénus 1",
         description: "ETHEREAL BEAUTY<br><br>Lorene’s ceramic practice merges scientific precision with a deep sensitivity to form, light, and texture.<br><br>Her signature pieces - composed of hundreds, sometimes thousands, of razor-thin, hand-sculpted elements - embody a sense of ethereal beauty : delicate yet enduring, weightless yet grounded in material mastery.",
         artist: "Lorene Cavagna",
         year: "2025",
@@ -142,7 +142,25 @@ const artworkData = {
         year: "2024",
         dimensions: "57 × 27 × 27 cm",
         image: "assets/images/artwork17.jpg"
-    }
+    },
+
+    18: {
+        title: "Algae 5",
+        description: "ETHEREAL BEAUTY<br><br>Lorene’s ceramic practice merges   scientific precision with a deep sensitivity to form, light, and texture.<br><br>Her signature pieces - composed of hundreds, sometimes thousands, of razor-thin, hand-sculpted elements - embody a sense of ethereal beauty : delicate yet enduring, weightless yet grounded in material mastery.",
+        artist: "Lorene Cavagna",
+        year: "2025",
+        dimensions: "599 × 375 cm",
+        image: "assets/images/artwork18.jpg"
+    },
+    19: {
+        title: "Conge 2",
+        description: "ETHEREAL BEAUTY<br><br>Lorene’s ceramic practice merges   scientific precision with a deep sensitivity to form, light, and texture.<br><br>Her signature pieces - composed of hundreds, sometimes thousands, of razor-thin, hand-sculpted elements - embody a sense of ethereal beauty : delicate yet enduring, weightless yet grounded in material mastery.",
+        artist: "Lorene Cavagna",
+        year: "2025",
+        dimensions: "599 × 375 cm",
+        image: "assets/images/artwork19.jpg"
+    },
+
 };
 
 // DOM elements

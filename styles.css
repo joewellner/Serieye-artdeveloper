@@ -206,14 +206,14 @@ body {
 }
 
 .cord[data-artwork="9"] {
-    left: calc(35% - 1px);
-    height: 180px;
+    left: calc(12% - 1px);
+    height: 80px;
     animation-delay: 1.2s;
 }
 
 .cord[data-artwork="10"] {
-    left: calc(65% - 1px);
-    height: 400px;
+    left: calc(36% - 1px);
+    height: 430px;
     animation-delay: 2.5s;
 }
 
@@ -239,6 +239,18 @@ body {
     left: calc(70% - 1px);
     height: 340px;
     animation-delay: 1.4s;
+}
+
+.cord[data-artwork="18"] {
+  left: calc(62% - 1px);
+  height: 200px;
+  animation-delay: 1.4s;
+}
+
+.cord[data-artwork="19"] {
+  left: calc(86% - 1px);
+  height: 440px;
+  animation-delay: 1.8s;
 }
 
 /* Artworks Container */
@@ -348,44 +360,15 @@ body {
     left: calc(85% - 120px);
 }
 
-.artwork[data-artwork="9"] {
-    top: var(--cord-height);
-    left: calc(35% - 140px) !important; /* Featured artwork - 280px wide */
+/* GARDEZ SEULEMENT ÇA */
+.artwork[data-artwork="9"] {  
+    top: 80px;
+    left: calc(12% - 140px) !important; /* Featured artwork - 280px wide */
 }
 
 .artwork[data-artwork="10"] {
     top: var(--cord-height);
-    left: calc(65% - 120px);
-}
-
-.artwork[data-artwork="11"] {
-    top: var(--cord-height);
-    left: calc(35% - 120px);
-}
-
-.artwork[data-artwork="12"] {
-    top: var(--cord-height);
-    left: calc(65% - 140px) !important; /* Featured artwork - 280px wide */
-}
-
-.artwork[data-artwork="13"] {
-    top: var(--cord-height);
-    left: calc(40% - 140px) !important; /* Featured artwork - 280px wide */
-}
-
-.artwork[data-artwork="14"] {
-    top: var(--cord-height);
-    left: calc(70% - 120px);
-}
-
-.artwork[data-artwork="9"] {
-    top: var(--cord-height);
-    left: calc(35% - 120px);
-}
-
-.artwork[data-artwork="10"] {
-    top: var(--cord-height);
-    left: calc(65% - 120px);
+    left: calc(36% - 120px);
 }
 
 .artwork[data-artwork="11"] {
@@ -406,6 +389,16 @@ body {
 .artwork[data-artwork="14"] {
     top: var(--cord-height);
     left: calc(70% - 120px);
+}
+
+.artwork[data-artwork="18"] {
+    top: 200px;
+    left: calc(62% - 120px);
+}
+
+.artwork[data-artwork="19"] {
+    top: var(--cord-height);
+    left: calc(86% - 120px);
 }
 
 /* Enhanced Hover Effects */

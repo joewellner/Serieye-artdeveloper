@@ -358,22 +358,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
-    gap: 30px;
 }
 
 .footer-text {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     color: #8b7355;
-    margin: 0;
-    white-space: nowrap;
 }
 
 .footer-links {
     display: flex;
     gap: 30px;
-    white-space: nowrap;
 }
 
 .footer-link {
@@ -486,7 +481,6 @@ body {
         flex-direction: column;
         gap: 20px;
         text-align: center;
-        flex-wrap: wrap;
     }
 }
 
