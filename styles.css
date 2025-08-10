@@ -1192,3 +1192,50 @@ body.scrolling .cord {
   .artist-bio { flex-direction: column; text-align: center; gap: 16px; }
   .artist-photo { width: 220px !important; height: 220px !important; margin: 0 auto !important; }
 }
+
+/* ===== Header compact + hide on scroll ===== */
+.main-nav {
+  transition: padding 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.main-nav.scrolled {
+  padding: 6px 16px !important;
+  background: rgba(245,241,235,0.98);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border-bottom-color: rgba(139,115,85,0.18);
+}
+.main-nav.scrolled .logo-img { height: 48px !important; }
+.main-nav.hide { transform: translateY(-100%); }
+
+/* ===== Popup : texte toujours lisible ===== */
+.popup-content { max-height: 90vh; }
+.popup-details {
+  overflow: auto;             /* défilement si le texte est long */
+  max-height: 80vh;           /* garde la modale dans l’écran */
+}
+.popup-details p { white-space: normal; overflow-wrap: anywhere; }
+
+/* ===== Footer en une ligne ===== */
+.footer { padding: 28px 0 !important; margin-top: 60px; }
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap; /* si l’écran est très petit, ça passe élégamment à la ligne */
+}
+.footer-text,
+.footer-links,
+.footer-link { display: inline; }
+.footer-links { display: inline-flex; gap: 14px; }
+.footer-text { color: #8b7355; font-size: 13px; }
+.footer-link { color: #8b7355; font-size: 13px; text-transform: uppercase; letter-spacing: .8px; }
+.footer-link:hover { color: #2c2c2c; }
+
+/* Petits écrans : header et footer nickel */
+@media (max-width: 768px) {
+  .main-nav.scrolled .logo-img { height: 42px !important; }
+  body { padding-top: 78px; } /* compense le header réduit */
+}

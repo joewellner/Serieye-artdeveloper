@@ -140,3 +140,19 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('🎨 Page About SeriEYE chargée avec succès !');
 });
 
+// === Header: shrink + hide on scroll (about page) ===
+(function () {
+  const nav = document.querySelector('.main-nav');
+  if (!nav) return;
+  let lastY = window.scrollY;
+
+  const apply = () => {
+    const y = window.scrollY;
+    if (y > 30) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+    if (y > lastY && y > 120) nav.classList.add('hide'); else nav.classList.remove('hide');
+    lastY = y;
+  };
+
+  apply();
+  window.addEventListener('scroll', apply, { passive: true });
+})();

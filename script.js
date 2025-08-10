@@ -480,6 +480,28 @@ window.addEventListener('scroll', () => {
   }, 1000);
 });
 
+// === Header: shrink + hide on scroll (gallery pages) ===
+(function () {
+  const nav = document.querySelector('.main-nav');
+  if (!nav) return;
+  let lastY = window.scrollY;
+
+  const apply = () => {
+    const y = window.scrollY;
+    // Shrink dès qu'on a un peu scrollé
+    if (y > 30) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+
+    // Hide en scroll descendant, show en scroll montant
+    if (y > lastY && y > 120) nav.classList.add('hide');
+    else nav.classList.remove('hide');
+
+    lastY = y;
+  };
+
+  apply();
+  window.addEventListener('scroll', apply, { passive: true });
+})();
 
 
 
