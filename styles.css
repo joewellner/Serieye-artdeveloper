@@ -1387,3 +1387,54 @@ body.scrolling .cord {
   body.contact .form-row { display: block; }
   body.contact .form-group { margin-bottom: 14px; }
 }
+
+/* ===== GALLERY — MOBILE ONLY (≤768px) ===== */
+@media (max-width: 768px) {
+  /* Header horizontal & compact UNIQUEMENT pour la page Gallery */
+  body.home .main-nav {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 !important;
+    padding: 10px 14px !important;
+    background: rgba(245,241,235,.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(139,115,85,.12);
+  }
+  body.home .logo-img { height: 42px !important; width: auto; object-fit: contain; }
+  body.home .nav-right { display: flex; flex-direction: row !important; gap: 14px !important; flex-wrap: nowrap; }
+  body.home .nav-link { font-size: 12px; letter-spacing: .8px; padding: 6px 0; white-space: nowrap; }
+
+  /* Contenu sous le header fixe (au cas où) */
+  body.home { padding-top: 72px; }
+
+  /* ----- Photos toutes à la même taille ----- */
+  /* On désactive le layout absolu en mobile */
+  .gallery-sections,
+  .gallery-section { position: static !important; height: auto !important; opacity: 1 !important; visibility: visible !important; transform: none !important; }
+  .gallery-section { margin-bottom: 64px; }
+
+  /* Grille verticale simple */
+  .artworks-container { display: flex; flex-direction: column; align-items: center; gap: 18px; position: static !important; }
+
+  /* Taille uniforme : même largeur + même ratio */
+  .artwork {
+    position: static !important;
+    width: min(92vw, 420px);
+    aspect-ratio: 4 / 5;   /* change le ratio ici si tu préfères (ex: 1/1, 3/4…) */
+    height: auto !important;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 16px;
+    transform: none !important;
+    animation: none !important;
+  }
+  .artwork img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* On enlève les éléments décoratifs qui gênent en mobile */
+  .cords-container, .gallery-nav, .nav-dot { display: none !important; }
+
+  /* Titre de section lisible */
+  .section-title { position: static !important; transform: none !important; margin: 0 0 16px; text-align: center; font-size: 20px; }
+}
