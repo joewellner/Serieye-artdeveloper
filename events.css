@@ -1,0 +1,355 @@
+/* Events Page Styles - SeriEYE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f1eb;
+    color: #2c2c2c;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(245, 241, 235, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8b7355;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #2c2c2c;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #8b7355;
+}
+
+/* Main Container */
+.events-container {
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 80px 40px 60px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.page-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #8b7355;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Events Grid */
+.events-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 60px;
+}
+
+/* Event Card */
+.event-card {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Event Image */
+.event-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.05);
+}
+
+.event-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(44, 44, 44, 0.9);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Event Content */
+.event-content {
+    padding: 40px;
+}
+
+.event-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.event-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #8b7355;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.event-description {
+    font-size: 1rem;
+    color: #5a5a5a;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Event Info */
+.event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #8b7355;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-weight: 400;
+    color: #2c2c2c;
+    text-align: right;
+    max-width: 60%;
+}
+
+/* Events Contact Section */
+.events-contact {
+    background: rgba(139, 115, 85, 0.05);
+    padding: 80px 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact-content p {
+    font-size: 1.1rem;
+    color: #8b7355;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: #8b7355;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.contact-btn:hover {
+    background: #6b5b47;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(139, 115, 85, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.event-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.event-card:nth-child(1) { animation-delay: 0.1s; }
+.event-card:nth-child(2) { animation-delay: 0.2s; }
+.event-card:nth-child(3) { animation-delay: 0.3s; }
+.event-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-nav {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-right {
+        gap: 20px;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px 60px;
+    }
+    
+    .event-content {
+        padding: 30px;
+    }
+    
+    .event-title {
+        font-size: 1.6rem;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .info-value {
+        text-align: left;
+        max-width: 100%;
+    }
+    
+    .events-contact {
+        padding: 60px 20px;
+    }
+    
+    .contact-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 60px 20px 40px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .event-image {
+        height: 250px;
+    }
+    
+    .event-content {
+        padding: 25px;
+    }
+}
+
