@@ -1483,3 +1483,38 @@ body.scrolling .cord {
 @media (max-width: 768px) {
   .art-card { aspect-ratio: 4 / 5; } /* plus haut sur mobile si tu veux */
 }
+
+/* ===== CONTACT — HEADER IDENTIQUE À ABOUT/GALLERY (MOBILE ≤768px) ===== */
+@media (max-width: 768px) {
+  body.contact .main-nav {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 !important;
+    padding: 10px 14px !important;
+    background: rgba(245,241,235,.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(139,115,85,.12);
+  }
+  body.contact .logo-img {
+    height: 42px !important;
+    width: auto;
+    object-fit: contain;
+  }
+  body.contact .nav-right {
+    display: flex;
+    flex-direction: row !important;
+    gap: 14px !important;
+    flex-wrap: nowrap;
+  }
+  body.contact .nav-link {
+    font-size: 12px;
+    letter-spacing: .8px;
+    padding: 6px 0;
+    white-space: nowrap;
+  }
+
+  /* Espace sous le header fixe */
+  body.contact { padding-top: var(--navH, 72px); }
+}
