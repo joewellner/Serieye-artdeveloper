@@ -81,7 +81,7 @@ const artworkData = {
         description: "ETHEREAL BEAUTY<br><br>Lorene’s ceramic practice merges scientific precision with a deep sensitivity to form, light, and texture.<br><br>Her signature pieces - composed of hundreds, sometimes thousands, of razor-thin, hand-sculpted elements - embody a sense of ethereal beauty : delicate yet enduring, weightless yet grounded in material mastery.",
         artist: "Lorene Cavagna",
         year: "2025",
-        dimensions: "108 × 160 cm",
+        dimensions: "40 × 30 × 24 cm",
         image: "assets/images/artwork10.jpg"
     },
     11: {
@@ -153,11 +153,11 @@ const artworkData = {
         image: "assets/images/artwork18.jpg"
     },
     19: {
-        title: "Conge 2",
+        title: "Conge",
         description: "ETHEREAL BEAUTY<br><br>Lorene’s ceramic practice merges   scientific precision with a deep sensitivity to form, light, and texture.<br><br>Her signature pieces - composed of hundreds, sometimes thousands, of razor-thin, hand-sculpted elements - embody a sense of ethereal beauty : delicate yet enduring, weightless yet grounded in material mastery.",
         artist: "Lorene Cavagna",
         year: "2025",
-        dimensions: "599 × 375 cm",
+        dimensions: "33 × 30 × 20 cm",
         image: "assets/images/artwork19.jpg"
     },
 
