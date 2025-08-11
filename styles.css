@@ -960,15 +960,6 @@ body {
     background: #8b7355;
     border-radius: 1px;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-    .main-nav {
-        padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
     
     .nav-right {
         gap: 20px;
@@ -981,18 +972,7 @@ body {
     .logo {
         font-size: 20px !important;
     }
-}
-
-@media (max-width: 480px) {
-    .nav-right {
-        flex-direction: column;
-        gap: 15px;
-    }
     
-    .main-nav {
-        padding: 15px;
-    }
-}
 /* Pour que le contenu ne soit pas caché sous le header fixe */
 body {
     padding-top: 90px;
@@ -1341,6 +1321,69 @@ body.scrolling .cord {
     width: 100%;
     font-size: 16px;           /* évite le zoom iOS */
   }
+  body.contact .form-row { display: block; }
+  body.contact .form-group { margin-bottom: 14px; }
+}
+
+/* ===== MOBILE ONLY (≤768px) — header horizontal + images uniformes + contact fluide ===== */
+@media (max-width: 768px) {
+  /* Header horizontal et compact sur Gallery (home) et Contact */
+  body.home .main-nav,
+  body.contact .main-nav {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 !important;
+    padding: 10px 14px !important;
+  }
+  body.home .nav-right,
+  body.contact .nav-right {
+    display: flex;
+    flex-direction: row !important;
+    gap: 14px !important;
+    flex-wrap: nowrap;
+  }
+  body.home .logo-img,
+  body.contact .logo-img { height: 42px !important; width: auto; }
+  body.home .nav-link,
+  body.contact .nav-link { font-size: 12px; letter-spacing: .8px; white-space: nowrap; }
+
+  /* Espace contenu sous header (sera mis à jour par JS) */
+  body.home,
+  body.contact { padding-top: var(--navH, 72px); }
+
+  /* Gallery — toutes les œuvres même taille en mobile */
+  .gallery-sections,
+  .gallery-section {
+    position: static !important;
+    height: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+  .artworks-container {
+    display: flex; flex-direction: column; align-items: center; gap: 18px;
+    position: static !important;
+  }
+  .artwork {
+    position: static !important;
+    width: min(92vw, 420px);
+    aspect-ratio: 4 / 5;      /* uniforme */
+    height: auto !important;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 16px;
+    transform: none !important;
+    animation: none !important;
+  }
+  .artwork img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* Contact — champs full width + meilleure ergonomie */
+  body.contact input,
+  body.contact textarea,
+  body.contact select,
+  body.contact button { width: 100%; font-size: 16px; }
   body.contact .form-row { display: block; }
   body.contact .form-group { margin-bottom: 14px; }
 }
