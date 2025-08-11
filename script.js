@@ -503,7 +503,22 @@ window.addEventListener('scroll', () => {
   window.addEventListener('scroll', apply, { passive: true });
 })();
 
+// === Mobile: expose --navH = hauteur réelle du header (pour le padding-top) ===
+(function () {
+  const nav = document.querySelector('.main-nav');
+  if (!nav) return;
 
+  const setNavH = () => {
+    const h = Math.ceil(nav.getBoundingClientRect().height);
+    document.documentElement.style.setProperty('--navH', h + 'px');
+  };
+
+  window.addEventListener('load', setNavH);
+  window.addEventListener('resize', setNavH);
+  window.addEventListener('scroll', setNavH, { passive: true });
+  new ResizeObserver(setNavH).observe(nav);
+  setNavH();
+})();
 
 
 

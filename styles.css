@@ -1281,3 +1281,66 @@ body.scrolling .cord {
   /* Espace contenu sous header (dépendra de la vraie hauteur calculée plus bas) */
   body.home { padding-top: var(--navH, 68px); }
 }
+
+/* =========================
+   MOBILE ONLY (≤768px)
+   ========================= */
+@media (max-width: 768px) {
+  /* 1) Header horizontal & compact sur Gallery (home) et Contact */
+  body.home .main-nav,
+  body.contact .main-nav {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 !important;
+    padding: 10px 14px !important;
+  }
+  body.home .logo-img,
+  body.contact .logo-img { height: 42px !important; object-fit: contain; }
+  body.home .nav-right,
+  body.contact .nav-right { gap: 14px !important; flex-wrap: nowrap; }
+  body.home .nav-link,
+  body.contact .nav-link { font-size: 12px; letter-spacing: .8px; padding: 6px 0; }
+
+  /* 2) Espace sous le header (calculé par JS via --navH) */
+  body.home,
+  body.contact { padding-top: var(--navH, 72px); }
+
+  /* 3) GALLERY — toutes les images à la même taille (uniformiser en mobile) */
+  .artworks-container { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+  .artwork {
+    width: 92vw;               /* même largeur */
+    max-width: 420px;
+    aspect-ratio: 4 / 5;       /* même ratio pour toutes */
+    overflow: hidden;
+    border-radius: 16px;       /* optionnel: joli arrondi */
+    position: static !important;
+    transform: none !important;
+    animation: none !important;
+    height: auto !important;
+    margin: 0 auto;
+  }
+  .artwork img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* recadre proprement si le ratio diffère */
+    display: block;
+  }
+
+  /* 4) CONTACT — fluidifier la page (form plein écran & spacing) */
+  .contact .contact-container,
+  body.contact .contact-container { padding: 16px; }
+  body.contact form,
+  body.contact .form,
+  body.contact .contact-form { width: 100%; max-width: 560px; margin: 0 auto; }
+  body.contact input,
+  body.contact textarea,
+  body.contact select,
+  body.contact button {
+    width: 100%;
+    font-size: 16px;           /* évite le zoom iOS */
+  }
+  body.contact .form-row { display: block; }
+  body.contact .form-group { margin-bottom: 14px; }
+}
