@@ -1518,3 +1518,44 @@ body.scrolling .cord {
   /* Espace sous le header fixe */
   body.contact { padding-top: var(--navH, 72px); }
 }
+
+/* CSS pour la section Lora Zyuzina */
+
+/* Fils pour les œuvres 20 et 21 */
+.cord[data-artwork="20"] {
+    left: calc(35% - 1px);
+    height: 220px;
+    animation-delay: 1.5s;
+}
+
+.cord[data-artwork="21"] {
+    left: calc(65% - 1px);
+    height: 380px;
+    animation-delay: 2.8s;
+}
+
+/* Positionnement des œuvres 20 et 21 */
+.artwork[data-artwork="20"] {
+    top: var(--cord-height);
+    left: calc(35% - 120px);
+}
+
+.artwork[data-artwork="21"] {
+    top: var(--cord-height);
+    left: calc(65% - 140px);
+}
+
+/* Animations pour les nouvelles œuvres */
+.artwork[data-artwork="20"] {
+    animation: artworkSwing 8s ease-in-out infinite;
+    transform-origin: top center;
+    animation-fill-mode: both;
+    transform: rotate(0deg);
+}
+
+.artwork[data-artwork="21"] {
+    animation: artworkSwing 8s ease-in-out infinite;
+    transform-origin: top center;
+    animation-fill-mode: both;
+    transform: rotate(0deg);
+}

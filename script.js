@@ -161,6 +161,23 @@ const artworkData = {
         image: "assets/images/artwork19.jpg"
     },
 
+    20: {
+        title: "I also want to",
+        description: "A ceramic sculpture exploring themes of freedom of speech and self-expression. Fired 5 times at 1200°C, this piece integrates visual elements reminiscent of street art, creating an informational and semantic field that questions identity and urban communication.",
+        artist: "Lora Zyuzina",
+        year: "2025",
+        dimensions: "51 × 32 × 22 cm",
+        image: "assets/images/artwork20.jpg"
+    },
+    21: {
+        title: "Object 3",
+        description: "This ceramic object embodies Zyuzina's research into logocentrism and urban visual archaeology. Fired 3 times at 1200°C, the piece features inscriptions and imagery that mirror the encrypted messages found in street art, creating a dialogue between personal stories and societal events.",
+        artist: "Lora Zyuzina",
+        year: "2025",
+        dimensions: "17 × 27 × 22 cm",
+        image: "assets/images/artwork21.jpg"
+    }
+
 };
 
 // DOM elements
