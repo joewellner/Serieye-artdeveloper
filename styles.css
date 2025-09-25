@@ -377,13 +377,13 @@ body {
 }
 
 .artwork[data-artwork="12"] {
-    top: var(--cord-height);
-    left: calc(65% - 120px);
+  top: var(--cord-height) !important;
+  left: calc(65% - 140px) !important; /* 140px car œuvre plus large (featured ?) */
 }
 
 .artwork[data-artwork="13"] {
-    top: var(--cord-height);
-    left: calc(40% - 120px);
+  top: var(--cord-height) !important;
+  left: calc(40% - 140px) !important;
 }
 
 .artwork[data-artwork="14"] {
