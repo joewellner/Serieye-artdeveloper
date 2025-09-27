@@ -2,11 +2,11 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://www.serieye.com/index.html</loc>
+    <loc>https://www.serieye.com/gallery.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.serieye.com/about.html</loc>
+    <loc>https://www.serieye.com/index.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
