@@ -537,5 +537,25 @@ window.addEventListener('scroll', () => {
   setNavH();
 })();
 
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        window.location.href = "merci.html"; // redirection forcée
+      } else {
+        alert("There was a problem submitting the form.");
+      }
+    }).catch(function () {
+      alert("Network error. Please try again.");
+    });
+  });
+});
 
 
